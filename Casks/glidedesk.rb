@@ -15,7 +15,7 @@ cask "glidedesk" do
 
   app "GlideDesk.app"
 
-  preflight do
+  preflight_steps do
     # When updating a running instance on a headless or mouse-less Mac, smoothly close it
     # without failing the Homebrew upgrade process
     was_running = system_command("/usr/bin/pgrep", args: ["-ix", "glidedesk"], result_type: :exit_status).zero?
@@ -23,7 +23,7 @@ cask "glidedesk" do
     system_command "/usr/bin/pkill", args: ["-ix", "glidedesk"], sudo: false if was_running
   end
 
-  postflight do
+  postflight_steps do
     # 1. Clear quarantine extended attribute to prevent macOS Gatekeeper "Move to Bin" warning
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/GlideDesk.app"],
