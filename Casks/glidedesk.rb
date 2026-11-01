@@ -11,7 +11,7 @@ cask "glidedesk" do
   homepage "https://github.com/glidedesk/GlideDesk"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "GlideDesk.app"
 
