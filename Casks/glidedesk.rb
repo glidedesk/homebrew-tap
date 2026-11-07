@@ -1,6 +1,6 @@
 cask "glidedesk" do
   version "3.2.0"
-  sha256 "a84f1b29f925304b7c56c8965e6f32ed6068c3fa5f476d946b7d0228f9d65d5b"
+  sha256 "b73617056d17325b878a369bcbce9ca3dcca4902163842eec9b27e13845f099d"
 
   url "https://github.com/glidedesk/GlideDesk/releases/download/v#{version}/GlideDesk_#{version}_universal.dmg"
   name "GlideDesk"
